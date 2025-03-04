@@ -1,7 +1,5 @@
 import React from "react";
 
-const PageLayout = () => {
+export const PageLayout = () => {
   return <div>Content </div>;
 };
-
-export default PageLayout;
