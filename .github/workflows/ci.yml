@@ -1,4 +1,4 @@
-name: CI Checks (Lint, Test, TypeScript)
+name: CI Checks (Lint, TypeScript)
 
 on:
   push:
