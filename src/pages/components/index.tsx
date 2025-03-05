@@ -3,7 +3,6 @@ import { TwoColumn } from "@/components/TwoColumn/TwoColumn";
 import { SectionContainer } from "@/components/SectionContainer/SectionContainer";
 import { Subheading } from "@/components/Subheading/Subheading";
 import Image from "next/image";
-import Link from "next/link";
 import { CTA } from "@/components/CTA/CTA";
 
 export default function Components() {
