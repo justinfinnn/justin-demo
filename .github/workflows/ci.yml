@@ -1,12 +1,12 @@
 name: CI Checks (Lint, TypeScript)
 
 on:
-  push:
-    branches:
-      - "**" # Runs on all branches
   pull_request:
     branches:
-      - "**"
+      - "**" # ✅ Runs on all PRs
+  push:
+    branches:
+      - main # ✅ Runs only when code is merged into `main`
 
 jobs:
   lint:
