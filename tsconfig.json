@@ -30,7 +30,8 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "src/pages/components/about.tsx",
-    "tailwind.config.js"
+    "tailwind.config.js",
+    "src/components/EmailSignup/EmailSignup.component.js"
   ],
   "exclude": ["node_modules"]
 }

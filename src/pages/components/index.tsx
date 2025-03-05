@@ -10,6 +10,7 @@ import Modal from "@/components/Modal/Modal";
 import Tabs from "@/components/Tabs/Tabs";
 import AutoComplete from "@/components/Autocomplete/Autocomplete";
 import TodoList from "@/components/ToDoList/ToDoList";
+import EmailSignup from "@/components/EmailSignup/EmailSignup.component";
 
 export default function Components() {
   const itemsArray = [
@@ -153,6 +154,7 @@ export default function Components() {
         </h1>
         <TodoList />
       </div>
+      <EmailSignup />
     </>
   );
 }
