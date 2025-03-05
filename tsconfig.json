@@ -29,7 +29,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/pages/components/about.tsx"
+    "src/pages/components/about.tsx",
+    "tailwind.config.js"
   ],
   "exclude": ["node_modules"]
 }
