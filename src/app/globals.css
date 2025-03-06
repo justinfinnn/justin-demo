@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #f8f4dd;
   --foreground: #171717;
 }
 
@@ -17,6 +17,8 @@
   --font-mono-alt: "Noto Sans Mono", monospace;
   --color-orange-hl: #ff6d0b;
   --color-black-hl: #1d1d1d;
+  --color-off-white: #f8f4dd;
+  --color-off-white-2: #f6f1d1;
 }
 
 @font-face {

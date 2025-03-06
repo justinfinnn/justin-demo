@@ -44,7 +44,7 @@ const Header: React.FC<HeaderProps> = ({ navItems }) => {
             <a
               key={item.name}
               href={item.url}
-              className="hover:underline decoration-2 decoration-[var(--color-orange-hl)] underline-offset-10 dark:text-zinc-50"
+              className="hover:underline decoration-2 font-berkeleymono decoration-[var(--color-orange-hl)] underline-offset-10 dark:text-zinc-50"
             >
               {item.name}
             </a>
@@ -66,7 +66,7 @@ const Header: React.FC<HeaderProps> = ({ navItems }) => {
             <a
               key={item.name}
               href={item.url}
-              className="block py-2 text-center hover:underline decoration-2 decoration-[var(--color-orange-hl)] underline-offset-10 text-[var(--color-black-hl)] dark:text-zinc-50"
+              className="block py-2 text-center font-berkeleymono hover:underline decoration-2 decoration-[var(--color-orange-hl)] underline-offset-10 text-[var(--color-black-hl)] dark:text-zinc-50"
             >
               {item.name}
             </a>

@@ -2,7 +2,7 @@ import React from "react";
 import "@app/globals.css";
 
 interface SubheadingProps {
-  children: string;
+  children: string | React.ReactNode;
   className?: string;
   type: string;
 }
