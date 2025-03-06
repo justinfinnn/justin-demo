@@ -15,7 +15,7 @@ export const Subheading: React.FC<SubheadingProps> = ({
   return (
     <>
       {type === "h2" ? (
-        <h2 className={`text-lg ${className}`}>{children}</h2>
+        <h2 className={` ${className}`}>{children}</h2>
       ) : (
         <p className={`${className}`}>{children}</p>
       )}

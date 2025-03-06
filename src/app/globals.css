@@ -9,12 +9,29 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono); /* Define your theme tokens here */
+  --font-mono: var(--font-geist-mono);
   --font-display: "Satoshi", "sans-serif";
   --ease-fluid: cubic-bezier(1.5, 0, 0, 1);
-  --font-mono: "BerkeleyMono", monospace;
-  --font-mono-bold: "BerkeleyMonoBold", monospace;
+  --font-berkeleymono: "BerkeleyMono", monospace;
+  --font-berkeleymono-bold: "BerkeleyMonoBold", monospace;
   --font-mono-alt: "Noto Sans Mono", monospace;
+  --color-orange-hl: #ff6d0b;
+  --color-black-hl: #1d1d1d;
+}
+
+@font-face {
+  font-family: "BerkeleyMono";
+  src: url("../../public/fonts/BerkeleyMonoVariable-Regular.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BerkeleyMonoBold";
+  src: url("../../public/fonts/BerkeleyMono-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
 }
 
 @keyframes fadeIn {
