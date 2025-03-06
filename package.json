@@ -7,13 +7,18 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "clean": "rm -rf node_modules && yarn cache clean"
   },
   "dependencies": {
     "@mailchimp/mailchimp_marketing": "^3.0.80",
+    "framer-motion": "^12.4.10",
+    "motion": "^12.4.10",
     "next": "15.2.1",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-fast-marquee": "^1.6.5",
+    "sass": "^1.85.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

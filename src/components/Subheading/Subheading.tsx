@@ -2,7 +2,7 @@ import React from "react";
 import "@app/globals.css";
 
 interface SubheadingProps {
-  children: string;
+  children: string | React.ReactNode;
   className?: string;
   type: string;
 }
@@ -15,7 +15,7 @@ export const Subheading: React.FC<SubheadingProps> = ({
   return (
     <>
       {type === "h2" ? (
-        <h2 className={`text-lg ${className}`}>{children}</h2>
+        <h2 className={` ${className}`}>{children}</h2>
       ) : (
         <p className={`${className}`}>{children}</p>
       )}

@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Heading } from "@/components/Heading/Heading";
-import { TwoColumn } from "@/components/TwoColumn/TwoColumn";
 import { SectionContainer } from "@/components/SectionContainer/SectionContainer";
+import { TwoColumn } from "@/components/TwoColumn/TwoColumn";
+import Header from "@/components/Header/Header";
 import { Subheading } from "@/components/Subheading/Subheading";
 import Accordion from "@/components/Accordion/Accordion";
 import Image from "next/image";
@@ -26,9 +27,13 @@ export default function Components() {
   ];
 
   const [isModalOpen, setModalOpen] = useState(false);
-
+  const navigation = [
+    { name: "Home", url: "/" },
+    { name: "Components", url: "/components" },
+  ];
   return (
     <>
+      <Header navItems={navigation} />
       <SectionContainer compact>
         <Heading border>Component Library</Heading>
       </SectionContainer>
@@ -81,9 +86,9 @@ export default function Components() {
         <h1 className="text-2xl font-bold mb-6">
           Two column with media, headline, subheading, and CTA content
         </h1>
-        <TwoColumn>
-          <SectionContainer className="grid grid-cols-12 gap-3 items-center">
-            <div className="col-span-12 md:col-span-5 pb-6 md:pb-0">
+        <SectionContainer>
+          <TwoColumn
+            image={
               <Image
                 src="/media-1.jpg"
                 alt="Next.js logo"
@@ -92,17 +97,13 @@ export default function Components() {
                 priority
                 className="rounded-lg"
               />
-            </div>
-            <div className="col-span-12 md:col-span-6 md:col-start-7">
-              <Heading>A headline to go with an image</Heading>
-              <Subheading type="p">
-                A subheading to go with the headline and image. This element can
-                either be a paragraph or an h2 element via prop.
-              </Subheading>
-              <CTA url="/components" text="Learn more" className="pt-10" />
-            </div>
-          </SectionContainer>
-        </TwoColumn>
+            }
+            heading="A headline to go with an image"
+            subheading="A subheading to go with the headline and image. This element can either be a paragraph or an h2 element via prop."
+          >
+            <CTA url="/components" text="Learn more" className="pt-10" />
+          </TwoColumn>
+        </SectionContainer>
       </div>
       <div className="flex min-h-screen flex-col items-center justify-center p-6 bg-gray-50 dark:bg-gray-900 border-b-2 border-black border-dashed">
         <SectionContainer>
