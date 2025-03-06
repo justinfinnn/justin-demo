@@ -14,7 +14,7 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="font-berkeleymono-bold text-5xl md:text-9xl text-[var(--color-orange-hl)]"
+            className="font-berkeleymono-bold text-5xl md:text-9xl text-[var(--color-orange-hl2)]"
           >
             HELL0,
           </motion.h1>

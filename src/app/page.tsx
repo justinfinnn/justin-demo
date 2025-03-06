@@ -2,13 +2,15 @@ import React from "react";
 import * as motion from "motion/react-client";
 import Hero from "@components/Hero/Hero";
 import Header from "@/components/Header/Header";
-import Image from "next/image";
 import { Heading } from "@/components/Heading/Heading";
 import { Subheading } from "@/components/Subheading/Subheading";
 import { SectionContainer } from "@/components/SectionContainer/SectionContainer";
 import { Ribbon } from "@/components/Ribbon/Ribbon";
 import "@app/globals.css";
 import { TwoColumn } from "@/components/TwoColumn/TwoColumn";
+import Frontend from "@/components/Stack/Frontend/Frontend";
+import Backend from "@/components/Stack/Backend/Backend";
+import Tools from "@/components/Stack/Tools/Tools";
 
 export default function Home() {
   const navigation = [
@@ -24,26 +26,21 @@ export default function Home() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut", delay: 2.7 }}
       >
-        <Ribbon className="font-berkeleymono text-[var(--color-orange-hl)]">
-          <div className="bg-[var(--color-off-white-2)] flex gap-x-12 py-8 ">
-            <span>test</span>
-          </div>
-        </Ribbon>
+        <SectionContainer compact>
+          <Heading
+            type="h1"
+            className="font-berkeleymono-bold text-5xl border-b-1"
+          >
+            Stack
+          </Heading>
+        </SectionContainer>
+        <Ribbon className="font-berkeleymono text-[var(--color-orange-hl)]" />
         <SectionContainer>
           <TwoColumn
-            image={
-              <Image
-                src="/stack.png"
-                alt="Next.js logo"
-                width={2000}
-                height={38}
-                priority
-                className="rounded-lg"
-              />
-            }
+            image={<Frontend />}
             heading={
-              <Heading type="h2" className="font-berkeleymono">
-                Front end
+              <Heading type="h2" className="font-berkeleymono border-b-1 mb-2">
+                Frontend
               </Heading>
             }
             subheading={
@@ -62,29 +59,19 @@ export default function Home() {
         </SectionContainer>
         <SectionContainer>
           <TwoColumn
-            image={
-              <Image
-                src="/stack.png"
-                alt="Next.js logo"
-                width={2000}
-                height={38}
-                priority
-                className="rounded-lg"
-              />
-            }
+            image={<Backend />}
             heading={
-              <Heading type="h2" className="font-berkeleymono">
-                Back end
+              <Heading type="h2" className="font-berkeleymono border-b-1 mb-2">
+                Backend
               </Heading>
             }
             subheading={
               <Subheading type="p" className="text-pretty">
                 On the backend, I use Node.js for its speed and scalability,
                 combined with TypeScript to ensure maintainability and type
-                safety. For cloud hosting and deployment, I rely on AWS,
-                leveraging its powerful services for scalability, security, and
-                performance. This stack ensures that applications are not only
-                fast and reliable but also built to scale seamlessly.
+                safety. I design APIs using both REST and GraphQL, allowing
+                flexibility depending on application needs—REST for traditional
+                structured API calls and GraphQL for more dynamic querying.
               </Subheading>
             }
             reverseOrder
@@ -92,18 +79,9 @@ export default function Home() {
         </SectionContainer>
         <SectionContainer>
           <TwoColumn
-            image={
-              <Image
-                src="/stack.png"
-                alt="Next.js logo"
-                width={2000}
-                height={38}
-                priority
-                className="rounded-lg"
-              />
-            }
+            image={<Tools />}
             heading={
-              <Heading type="h2" className="font-berkeleymono">
+              <Heading type="h2" className="font-berkeleymono border-b-1 mb-2">
                 Tooling
               </Heading>
             }
@@ -124,6 +102,14 @@ export default function Home() {
               </Subheading>
             }
           />
+        </SectionContainer>
+        <SectionContainer compact>
+          <Heading
+            type="h1"
+            className="font-berkeleymono-bold text-5xl border-b-1"
+          >
+            Work
+          </Heading>
         </SectionContainer>
       </motion.div>
     </>
