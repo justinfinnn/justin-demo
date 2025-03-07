@@ -1,18 +1,37 @@
 import React from "react";
 import Marquee from "react-fast-marquee";
+import Image from "next/image";
 import "@app/globals.css";
 
-interface RibbonProps {
-  children: React.ReactNode;
-  className?: string;
+interface RibbonItem {
+  image: string;
+  name: string;
 }
 
-export const Ribbon: React.FC<RibbonProps> = ({ children, className }) => {
+interface RibbonProps {
+  className?: string;
+  data: RibbonItem[];
+}
+
+export const Ribbon: React.FC<RibbonProps> = ({ className, data }) => {
   return (
     <Marquee
-      className={`${className} bg-[var(--color-off-white-2)] border-t-1 border-dashed border-zinc-50`}
+      className={`${className} bg-[var(--color-off-white-2)] dark:bg-cyan-950 py-6`}
     >
-      {children}
+      <div className="flex gap-x-20 items-center justify-center last:pr-18">
+        {data.map((item, index) => (
+          <div key={index} className="flex items-center gap-x-4">
+            <Image
+              src={`/icons/${item.image}.png`}
+              alt={`${item.name} icon`}
+              width={23}
+              height={38}
+              priority
+            />
+            <div>{item.name}</div>
+          </div>
+        ))}
+      </div>
     </Marquee>
   );
 };
