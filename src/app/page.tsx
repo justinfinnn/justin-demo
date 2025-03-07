@@ -15,9 +15,9 @@ import "@app/globals.css";
 
 export default function Home() {
   const navigation = [
-    { name: "Home", url: "/" },
-    { name: "Components", url: "/components" },
-    { name: "GitHub", url: "/components" },
+    { name: "Home", url: "/", target: "" },
+    { name: "Components", url: "/components", target: "" },
+    { name: "GitHub", url: "https://github.com/justinfinnn", target: "_blank" },
   ];
 
   const RibbonStack = [

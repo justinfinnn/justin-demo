@@ -28,8 +28,9 @@ export default function Components() {
 
   const [isModalOpen, setModalOpen] = useState(false);
   const navigation = [
-    { name: "Home", url: "/" },
-    { name: "Components", url: "/components" },
+    { name: "Home", url: "/", target: "" },
+    { name: "Components", url: "/components", target: "" },
+    { name: "GitHub", url: "https://github.com/justinfinnn", target: "_blank" },
   ];
   return (
     <>

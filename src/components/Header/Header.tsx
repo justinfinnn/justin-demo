@@ -1,10 +1,12 @@
 "use client"; // Required for Next.js as this component uses state
 
+import Link from "next/link";
 import React, { useState } from "react";
 
 interface NavItem {
   name: string;
   url: string;
+  target: string;
 }
 
 interface HeaderProps {
@@ -41,13 +43,14 @@ const Header: React.FC<HeaderProps> = ({ navItems }) => {
 
         <nav className="hidden md:flex space-x-6">
           {navItems.map((item) => (
-            <a
+            <Link
               key={item.name}
               href={item.url}
               className="hover:underline decoration-2 font-berkeleymono decoration-[var(--color-orange-hl)] underline-offset-10 dark:text-zinc-50"
+              target={item.target}
             >
               {item.name}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -63,13 +66,14 @@ const Header: React.FC<HeaderProps> = ({ navItems }) => {
       >
         <nav className="mt-5 border-2 border--[var(--color-black-hl)] dark:border-zinc-50 p-4 rounded shadow-lg">
           {navItems.map((item) => (
-            <a
+            <Link
               key={item.name}
               href={item.url}
               className="block py-2 text-center font-berkeleymono hover:underline decoration-2 decoration-[var(--color-orange-hl)] underline-offset-10 text-[var(--color-black-hl)] dark:text-zinc-50"
+              target={item.target}
             >
               {item.name}
-            </a>
+            </Link>
           ))}
         </nav>
       </div>
