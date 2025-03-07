@@ -140,11 +140,11 @@ This is my personal portfolio, but if you have suggestions to improve it, feel f
 
 ## 📬 Contact Me
 
-📧 **Email:**
+📧 **Email:** [justinfinnegan18@gmail.com](mailto:justinfinnegan18@gmail.com)
 
-🌐 **Portfolio:** [yourportfolio.com](#)
+🌐 **GitHub:** [github.com/justinfinnn](https://github.com/justinfinnn)
 
-💼 **LinkedIn:** [linkedin.com/in/yourprofile](https://www.linkedin.com/in/yourprofile/)
+💼 **LinkedIn:** [linkedin.com/in/justinfinneganto/](https://www.linkedin.com/in/justinfinneganto/)
 
 ---
 
