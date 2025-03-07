@@ -47,7 +47,7 @@ const EmailSignup = () => {
       className="relative isolate overflow-hidden sm:py-24 lg:py-48"
     >
       <div className="mx-auto w-full md:w-10/12 px-10 py-20 lg:px-8">
-        <div className="mx-auto max-w-xl lg:max-w-2xl text-center border border-2 border-white rounded-3xl backdrop-blur-xl p-10 lg:p-16">
+        <div className="mx-auto max-w-xl lg:max-w-2xl text-center border-2 border-white rounded-3xl backdrop-blur-xl p-10 lg:p-16">
           <h2 className="text-3xl tracking-tight text-white sm:text-4xl font-BerkeleyMonoBold text-balance">
             Be the first to know
           </h2>
@@ -97,7 +97,7 @@ const EmailSignup = () => {
             </div>
             <button
               type="submit"
-              className="mt-6 flex-none rounded-full bg-orange-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-orange-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500 font-BerkeleyMono"
+              className="mt-6 flex-none rounded-full bg-orange-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-orange-700 outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500 font-BerkeleyMono"
               disabled={loading}
             >
               {loading ? "Subscribing..." : "Subscribe"}
