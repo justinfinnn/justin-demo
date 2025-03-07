@@ -12,6 +12,7 @@ import Backend from "@/components/Stack/Backend/Backend";
 import Tools from "@/components/Stack/Tools/Tools";
 import Workplaces from "@/components/Workplaces/Workplaces";
 import "@app/globals.css";
+import Link from "next/link";
 
 export default function Home() {
   const navigation = [
@@ -183,6 +184,40 @@ export default function Home() {
         </SectionContainer>
         <SectionContainer collapseTop>
           <Workplaces data={WorkplacesData} />
+        </SectionContainer>
+        <SectionContainer compact bgColor=" bg-amber-50">
+          <div className="w-full text-center">
+            Thanks for checking out my project. Everything was made by me, and
+            if you want to check out this repository, it&apos;s{" "}
+            <Link
+              href="https://github.com/justinfinnn/justin-demo"
+              className="hover:decoration-2 font-berkeleymono underline decoration-[var(--color-orange-hl)] dark:text-zinc-50 underline-offset-4"
+              target="_blank"
+            >
+              public on GitHub
+            </Link>
+            .
+          </div>
+          <div className="flex items-center gap-x-10 justify-center pt-8">
+            <div>
+              <Link
+                href="https://www.linkedin.com/in/justinfinneganto/"
+                className="hover:decoration-2 font-berkeleymono underline decoration-[var(--color-orange-hl)] dark:text-zinc-50 underline-offset-4"
+                target="_blank"
+              >
+                LinkedIn
+              </Link>
+            </div>
+            <div>
+              <Link
+                href="https://github.com/justinfinnn/"
+                className="hover:decoration-2 font-berkeleymono underline decoration-[var(--color-orange-hl)] dark:text-zinc-50 underline-offset-4"
+                target="_blank"
+              >
+                GitHub
+              </Link>
+            </div>
+          </div>
         </SectionContainer>
       </motion.div>
     </>
