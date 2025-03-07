@@ -1,13 +1,14 @@
 import React from "react";
 import "@app/globals.css";
 
+// Props interface for the SectionContainer component
 interface SectionContainerProps {
-  children: React.ReactNode;
-  compact?: boolean;
-  collapseBottom?: boolean;
-  collapseTop?: boolean;
-  className?: string;
-  bgColor?: string;
+  children: React.ReactNode; // Content inside the section container
+  compact?: boolean; // If true, reduces padding for a more compact layout
+  collapseBottom?: boolean; // If true, removes bottom padding
+  collapseTop?: boolean; // If true, removes top padding
+  className?: string; // Additional custom CSS classes
+  bgColor?: string; // Background color class for the section
 }
 
 export const SectionContainer: React.FC<SectionContainerProps> = ({
@@ -18,17 +19,19 @@ export const SectionContainer: React.FC<SectionContainerProps> = ({
   className = "",
   bgColor = "",
 }) => {
-  // Determine spacing classes based on props
+  // Determine top padding class based on props
   const paddingTopClass = collapseTop
-    ? "pt-0"
+    ? "pt-0" // Remove top padding if collapseTop is true
     : compact
-    ? "pt-12"
-    : "pt-12 md:pt-36";
+    ? "pt-12" // Apply smaller top padding for compact mode
+    : "pt-12 md:pt-36"; // Default top padding
+
+  // Determine bottom padding class based on props
   const paddingBottomClass = collapseBottom
-    ? "pb-0"
+    ? "pb-0" // Remove bottom padding if collapseBottom is true
     : compact
-    ? "pb-12"
-    : "pb-36";
+    ? "pb-12" // Apply smaller bottom padding for compact mode
+    : "pb-36"; // Default bottom padding
 
   return (
     <div className={`${bgColor} w-full`}>
