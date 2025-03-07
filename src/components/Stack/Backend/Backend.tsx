@@ -11,7 +11,7 @@ const Backend: React.FC = () => {
           width={200}
           height={38}
           priority
-          className="mx-auto"
+          className="mx-auto w-[90px] md:w-[200px]"
         />
       </div>
       <div className="flex items-center justify-center pt-5 gap-5">
@@ -19,18 +19,20 @@ const Backend: React.FC = () => {
           <Image
             src="/icons/graphql.png"
             alt="Next.js logo"
-            width={130}
+            width={120}
             height={38}
             priority
+            className="mx-auto w-[70px] md:w-[120px]"
           />
         </div>
         <div>
           <Image
             src="/icons/postman.png"
             alt="Next.js logo"
-            width={120}
+            width={110}
             height={38}
             priority
+            className="mx-auto w-[70px] md:w-[110px]"
           />
         </div>
       </div>

@@ -3,32 +3,28 @@ import Marquee from "react-fast-marquee";
 import Image from "next/image";
 import "@app/globals.css";
 
-interface RibbonProps {
-  className?: string;
+interface RibbonItem {
+  image: string;
+  name: string;
 }
 
-export const Ribbon: React.FC<RibbonProps> = ({ className }) => {
-  const RibbonContent = [
-    { image: "postman", name: "Postman" },
-    { image: "docker", name: "docker" },
-    { image: "aws", name: "aws" },
-    { image: "github", name: "github" },
-    { image: "graphql", name: "graphql" },
-    { image: "nextjs", name: "nextjs" },
-    { image: "react", name: "react" },
-    { image: "typescript", name: "typescript" },
-    { image: "node", name: "node.js" },
-  ];
+interface RibbonProps {
+  className?: string;
+  data: RibbonItem[];
+}
 
+export const Ribbon: React.FC<RibbonProps> = ({ className, data }) => {
   return (
-    <Marquee className={`${className} bg-[var(--color-off-white-2)] py-6`}>
-      <div className="flex gap-x-10 items-center justify-center">
-        {RibbonContent.map((item, index) => (
-          <div key={index} className="flex items-center gap-x-4 pl-20">
+    <Marquee
+      className={`${className} bg-[var(--color-off-white-2)] dark:bg-cyan-950 py-6`}
+    >
+      <div className="flex gap-x-20 items-center justify-center last:pr-18">
+        {data.map((item, index) => (
+          <div key={index} className="flex items-center gap-x-4">
             <Image
-              src={`/icons/${item.image}.png`} // Use dynamic image
+              src={`/icons/${item.image}.png`}
               alt={`${item.name} icon`}
-              width={30}
+              width={23}
               height={38}
               priority
             />

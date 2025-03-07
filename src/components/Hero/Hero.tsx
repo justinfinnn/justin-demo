@@ -2,6 +2,7 @@
 
 import React from "react";
 import * as motion from "motion/react-client";
+import Link from "next/link";
 import { SectionContainer } from "@/components/SectionContainer/SectionContainer";
 import "@app/globals.css";
 
@@ -37,6 +38,23 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.8, ease: "easeOut", delay: 2.5 }}
           >
             I know you&apos;re busy, I&apos;ll keep it short.
+          </motion.p>
+          <motion.p
+            className="col-span-12 md:col-span-6 md:col-start-7 text-left md:text-right text-[var(--color-black-hl)] dark:text-zinc-50 pb-3 text-pretty"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 2.5 }}
+          >
+            I hope you like my website, I made it myself, and it&apos;s
+            available on{" "}
+            <Link
+              href="https://github.com/justinfinnn/justin-demo"
+              className="hover:decoration-2 font-berkeleymono underline decoration-[var(--color-orange-hl)] dark:text-zinc-50  underline-offset-4"
+              target="_blank"
+            >
+              GitHub
+            </Link>{" "}
+            if you want to check it out.
           </motion.p>
           <motion.p
             className="col-span-12 md:col-span-6 md:col-start-7 text-left md:text-right text-[var(--color-black-hl)] dark:text-zinc-50 pb-3 text-pretty"

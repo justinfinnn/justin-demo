@@ -11,7 +11,7 @@ const Frontend: React.FC = () => {
           width={120}
           height={38}
           priority
-          className="mx-auto"
+          className="mx-auto w-[75px] md:w-[120px]"
         />
       </div>
       <div className="flex items-center justify-center pt-5 gap-12">
@@ -22,6 +22,7 @@ const Frontend: React.FC = () => {
             width={90}
             height={38}
             priority
+            className="mx-auto w-[70px] md:w-[90px]"
           />
         </div>
         <div>
@@ -31,6 +32,7 @@ const Frontend: React.FC = () => {
             width={90}
             height={38}
             priority
+            className="mx-auto w-[70px] md:w-[90px]"
           />
         </div>
       </div>
