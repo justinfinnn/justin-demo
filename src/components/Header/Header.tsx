@@ -3,25 +3,30 @@
 import Link from "next/link";
 import React, { useState } from "react";
 
+// Interface for navigation items
 interface NavItem {
-  name: string;
-  url: string;
-  target: string;
+  name: string; // Display name of the navigation item
+  url: string; // URL the navigation item links to
+  target: string; // Determines how the link opens (_self, _blank, etc.)
 }
 
+// Props for the Header component
 interface HeaderProps {
-  navItems: NavItem[];
+  navItems: NavItem[]; // Array of navigation items
 }
 
 const Header: React.FC<HeaderProps> = ({ navItems }) => {
+  // State to track the mobile menu visibility
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <header className="text-[var(--color-black-hl)] px-6 pt-6">
+      {/* Top section with a toggle button for mobile menu */}
       <div className="flex justify-between items-center">
-        <div />
+        <div /> {/* Placeholder for additional content if needed */}
+        {/* Mobile menu button */}
         <button
-          className="md:hidden text-[var(--color-black-hl)] focus:outline-none dark:dark:text-zinc-50"
+          className="md:hidden text-[var(--color-black-hl)] focus:outline-none dark:text-zinc-50"
           onClick={() => setIsOpen(!isOpen)}
         >
           <svg
@@ -32,6 +37,7 @@ const Header: React.FC<HeaderProps> = ({ navItems }) => {
             xmlns="http://www.w3.org/2000/svg"
             style={{ transform: isOpen ? "rotate(90deg)" : "rotate(0deg)" }}
           >
+            {/* Menu icon (three horizontal lines) */}
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -40,7 +46,7 @@ const Header: React.FC<HeaderProps> = ({ navItems }) => {
             />
           </svg>
         </button>
-
+        {/* Desktop navigation menu */}
         <nav className="hidden md:flex space-x-6">
           {navItems.map((item) => (
             <Link
@@ -53,10 +59,11 @@ const Header: React.FC<HeaderProps> = ({ navItems }) => {
             </Link>
           ))}
         </nav>
-
+        {/* Placeholder div for additional desktop elements if needed */}
         <div className="hidden md:flex items-center"></div>
       </div>
 
+      {/* Mobile navigation menu (hidden by default, toggles open/close) */}
       <div
         className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
           isOpen
@@ -64,7 +71,7 @@ const Header: React.FC<HeaderProps> = ({ navItems }) => {
             : "max-h-0 opacity-0 -translate-y-2"
         }`}
       >
-        <nav className="mt-5 border-2 border--[var(--color-black-hl)] dark:border-zinc-50 p-4 rounded shadow-lg">
+        <nav className="mt-5 border-2 border-[var(--color-black-hl)] dark:border-zinc-50 p-4 rounded shadow-lg">
           {navItems.map((item) => (
             <Link
               key={item.name}
