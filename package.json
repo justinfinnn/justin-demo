@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "type-check": "tsc --noEmit",
-    "clean": "rm -rf node_modules && yarn cache clean"
+    "clean": "rm -rf node_modules && yarn cache clean",
+    "setup": "bash setup.sh"
   },
   "dependencies": {
     "@mailchimp/mailchimp_marketing": "^3.0.80",
