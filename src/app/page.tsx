@@ -6,35 +6,28 @@ import { Heading } from "@/components/Heading/Heading";
 import { Subheading } from "@/components/Subheading/Subheading";
 import { SectionContainer } from "@/components/SectionContainer/SectionContainer";
 import { Ribbon } from "@/components/Ribbon/Ribbon";
-import { TwoColumn } from "@/components/TwoColumn/TwoColumn";
-import Frontend from "@/components/Stack/Frontend/Frontend";
-import Backend from "@/components/Stack/Backend/Backend";
-import Tools from "@/components/Stack/Tools/Tools";
 import Workplaces from "@/components/Workplaces/Workplaces";
 import "@app/globals.css";
-import Link from "next/link";
 
 export default function Home() {
   const navigation = [
     { name: "Home", url: "/", target: "" },
-    { name: "Components", url: "/components", target: "" },
     { name: "GitHub", url: "https://github.com/justinfinnn", target: "_blank" },
+    { name: "LinkedIn", url: "https://www.linkedin.com/in/justinfinneganto/", target: "_blank" },
   ];
 
   const RibbonStack = [
-    { image: "postman", name: "Postman" },
     { image: "docker", name: "Docker" },
     { image: "aws", name: "AWS" },
     { image: "github", name: "GitHub" },
     { image: "graphql", name: "GraphQL" },
     { image: "nextjs", name: "Next.js" },
     { image: "react", name: "React" },
+    { image: "react", name: "React Native" },
     { image: "typescript", name: "TypeScript" },
     { image: "node", name: "Node.js" },
     { image: "javascript", name: "JavaScript" },
     { image: "postgresql", name: "PostgreSQL" },
-    { image: "vs-code", name: "Visual Studio Code" },
-    { image: "yarn", name: "yarn ftw" },
     { image: "datadog", name: "Datadog" },
   ];
 
@@ -70,103 +63,54 @@ export default function Home() {
             type="h1"
             className="font-berkeleymono-bold text-5xl border-b-1"
           >
-            Stack
+            My stack  
           </Heading>
         </SectionContainer>
-        <div>
-          <SectionContainer>
-            <TwoColumn
-              image={<Frontend />}
-              heading={
-                <Heading
-                  type="h2"
-                  className="font-berkeleymono border-b-1 mb-2"
-                >
-                  Frontend
-                </Heading>
-              }
-              subheading={
-                <Subheading type="p" className="text-pretty">
-                  For the frontend, I rely on{" "}
-                  <span className="font-berkeleymono">React</span> to create
-                  dynamic and interactive user interfaces, while{" "}
-                  <span className="font-berkeleymono">TypeScript</span>
-                  ensures type safety and improved developer experience. State
-                  management is handled with Redux. When building for mobile,{" "}
-                  <span className="font-berkeleymono">React Native</span> allows
-                  me to create performant cross-platform applications with a
-                  shared codebase. This stack ensures fast, maintainable, and
-                  scalable frontend applications that deliver smooth user
-                  experiences across web and mobile.
-                </Subheading>
-              }
-            />
-          </SectionContainer>
-        </div>
-        <SectionContainer>
-          <TwoColumn
-            image={<Backend />}
-            heading={
-              <Heading type="h2" className="font-berkeleymono border-b-1 mb-2">
-                Backend
-              </Heading>
-            }
-            subheading={
-              <Subheading type="p" className="text-pretty">
-                On the backend, I use{" "}
-                <span className="font-berkeleymono">Node.js</span> for its speed
-                and scalability, combined with{" "}
-                <span className="font-berkeleymono">TypeScript</span> to ensure
-                maintainability and type safety. I design APIs using both{" "}
-                <span className="font-berkeleymono">REST</span> and{" "}
-                <span className="font-berkeleymono">GraphQL</span>, allowing
-                flexibility depending on application needs—REST for traditional
-                structured <span className="font-berkeleymono">API calls</span>{" "}
-                and <span className="font-berkeleymono">GraphQL</span> for more
-                dynamic querying.
-              </Subheading>
-            }
-            reverseOrder
-          />
+        <SectionContainer compact className="pb-26">
+          <div className="grid grid-cols-3 gap-12">
+            <div className="col-span-3 md:col-span-1 px-6 md:px-0">
+              <Heading type="h3" className="font-berkeleymono-bold text-2xl">Web</Heading>
+              <div>
+                <ul className="list-disc">
+                        <li><strong>Core:</strong> Node.js, Next.js</li>
+                  <li><strong>CMS / Content:</strong> Prismic, Contentful</li>
+                  <li><strong>Styling & UI:</strong> Tailwind, Storybook </li>
+                  <li><strong>Data Layer:</strong> GraphQL, REST APIs</li>
+                  <li><strong>Infra / Build Tools:</strong> Coolify, Netlify, Vercel, Cloudflare, AWS</li>
+                  <li><strong>TypeScript</strong></li>
+                </ul>
+              </div>
+            </div>
+                        <div className="col-span-3 md:col-span-1 px-6 md:px-0">
+              <Heading type="h3" className="font-berkeleymono-bold text-2xl">Mobile</Heading>
+              <div>
+                <ul className="list-disc">
+                  <li><strong>Core</strong>: React Native, Expo</li>
+                  <li><strong>Backend / Data</strong>: Supabase, <span className="line-through">Firebase</span></li>
+                  <li><strong>Navigation & UI</strong>: React Navigation, Reanimated</li>
+                  <li><strong>Testing & Dev Tools</strong>: Jest</li>
+                  <li><strong>Deployment</strong>: EAS (Expo Application Services), TestFlight, Play Console</li>
+                </ul>
+              </div>
+            </div>
+                        <div className="col-span-3 md:col-span-1 px-6 md:px-0">
+              <Heading type="h3" className="font-berkeleymono-bold text-2xl">Tools</Heading>
+              <div>
+                <ul className="list-disc">
+                  	<li><strong>Core Dev</strong>: Command Line, Cursor, VS Code</li>
+	<li><strong>Mobile Dev</strong>: iOS Simulator, Android Emulator</li>
+	<li><strong>Version Control</strong>: Git, GitHub</li>
+	<li><strong>DevOps / Infra</strong>: Docker, Docker Compose, Homebrew</li>
+	<li><strong>Debugging / Monitoring</strong>: Chrome DevTools, React DevTools, Flipper</li>
+	<li><strong>Collaboration</strong>: Slack, Discord, Notion</li>
+	<li><strong>Automation / CI</strong>: GitHub Actions, Cron jobs</li>
+	<li><strong>Other Essentials</strong>: Postman/Insomnia, pnpm/yarn</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </SectionContainer>
-        <SectionContainer>
-          <TwoColumn
-            image={<Tools />}
-            heading={
-              <Heading type="h2" className="font-berkeleymono border-b-1 mb-2">
-                Tooling
-              </Heading>
-            }
-            subheading={
-              <Subheading type="p" className="text-pretty">
-                To streamline development, automation, and monitoring, I rely on
-                a solid set of tools.{" "}
-                <span className="font-berkeleymono">GitHub Actions</span> helps
-                me automate CI/CD pipelines, ensuring smooth deployments and
-                code quality checks.
-                <span className="font-berkeleymono">Docker</span> simplifies
-                containerization, making development and deployment consistent
-                across environments. For scalable cloud infrastructure, I
-                leverage <span className="font-berkeleymono">AWS ECS</span> to
-                orchestrate containerized applications, ensuring seamless
-                deployment and management.{" "}
-                <span className="font-berkeleymono">AWS S3</span> provides
-                reliable object storage for assets and backups, while{" "}
-                <span className="font-berkeleymono">AWS RDS</span> handles
-                relational databases with automated backups and scaling. For
-                project management and team collaboration, I use{" "}
-                <span className="font-berkeleymono">Jira</span> to organize
-                tasks and track progress efficiently. Datadog provides real-time
-                monitoring and observability, ensuring optimal application
-                performance. And of course,{" "}
-                <span className="font-berkeleymono">VS Code</span> is my go-to
-                editor, packed with powerful extensions that enhance my
-                productivity. Together, these tools enable me to stay efficient,
-                organized, and deliver high-quality software.
-              </Subheading>
-            }
-          />
-        </SectionContainer>
+
         <SectionContainer compact>
           <Heading
             type="h1"
@@ -184,40 +128,6 @@ export default function Home() {
         </SectionContainer>
         <SectionContainer collapseTop>
           <Workplaces data={WorkplacesData} />
-        </SectionContainer>
-        <SectionContainer compact bgColor=" bg-amber-50">
-          <div className="w-full text-center">
-            Thanks for checking out my project. Everything was made by me, and
-            if you want to check out this repository, it&apos;s{" "}
-            <Link
-              href="https://github.com/justinfinnn/justin-demo"
-              className="hover:decoration-2 font-berkeleymono underline decoration-[var(--color-orange-hl)] dark:text-zinc-50 underline-offset-4"
-              target="_blank"
-            >
-              public on GitHub
-            </Link>
-            .
-          </div>
-          <div className="flex items-center gap-x-10 justify-center pt-8">
-            <div>
-              <Link
-                href="https://www.linkedin.com/in/justinfinneganto/"
-                className="hover:decoration-2 font-berkeleymono underline decoration-[var(--color-orange-hl)] dark:text-zinc-50 underline-offset-4"
-                target="_blank"
-              >
-                LinkedIn
-              </Link>
-            </div>
-            <div>
-              <Link
-                href="https://github.com/justinfinnn/"
-                className="hover:decoration-2 font-berkeleymono underline decoration-[var(--color-orange-hl)] dark:text-zinc-50 underline-offset-4"
-                target="_blank"
-              >
-                GitHub
-              </Link>
-            </div>
-          </div>
         </SectionContainer>
       </motion.div>
     </>
